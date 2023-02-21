@@ -1,6 +1,8 @@
 ## Team members
 Setthanant Tetanonsakul 6115269
+
 HA NGOC BAO LINH 6138310
+
 Thanyaluck Arunrattnakul 6215301
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
