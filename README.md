@@ -18,8 +18,13 @@ A web application that could provide for students with a centralized platform to
 
 ## Tech Stack
  HTML
+ 
  CSS
+ 
  JAVASCRIPT
+ 
  MONGODB
+ 
  NODEJS
+ 
  YARN
