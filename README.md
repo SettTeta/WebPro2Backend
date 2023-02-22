@@ -1,10 +1,10 @@
 ## Project Name
+STUDENT HUB
+
 
 ## Team members
 Setthanant Tetanonsakul 6115269
-
-HA NGOC BAO LINH 6138310
-
+Ha Ngoc Bao Linh 6138310
 Thanyaluck Arunrattnakul 6215301
 
 
