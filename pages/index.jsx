@@ -17,7 +17,19 @@ export default function Home({ students }) {
                         return (
                             <tr key={student._id}>
                                 <td>
+                                    {student.email}
+                                </td>
+                                <td>
+                                    {student.username}
+                                </td>
+                                <td>
                                     {student.firstName}
+                                </td>
+                                <td>
+                                    {student.lastName}
+                                </td>
+                                <td>
+                                    {student.password}
                                 </td>
                             </tr>
                         )
@@ -31,8 +43,8 @@ export default function Home({ students }) {
     )
 }
 export async function getServerSideProps() {
+    // const res = await fetch(`http://localhost:3000/api/project-2/students`)
     const res = await fetch(`https://web-pro2-backend.vercel.app/api/project-2/student`)
     const students = await res.json()
-    // console.debug('blog 1', blogs)
     return { props: { students } }
 }

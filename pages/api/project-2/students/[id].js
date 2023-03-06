@@ -36,4 +36,4 @@ const studentSchema = new Schema({
 });
 
 console.log("Mongoose Models", models)
-const Student = models?.student || model('student', studentSchema);
+const Student = models?.students || model('students', studentSchema);
