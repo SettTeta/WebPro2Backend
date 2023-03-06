@@ -31,7 +31,7 @@ export default function Home({ students }) {
     )
 }
 export async function getServerSideProps() {
-    const res = await fetch(`http://localhost:3000/api/project-2/student`)
+    const res = await fetch(`https://web-pro2-backend.vercel.app/api/project-2/student`)
     const students = await res.json()
     // console.debug('blog 1', blogs)
     return { props: { students } }
