@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-export default function Home({ students, courses }) {
+export default function Home({ students, courses, registrations }) {
 
 
     return (
@@ -30,6 +30,9 @@ export default function Home({ students, courses }) {
                                 </td>
                                 <td>
                                     {student.password}
+                                </td>
+                                <td>
+                                    <Link href={`/student/${student._id}`}>Profile</Link>
                                 </td>
                             </tr>
                         )
@@ -66,6 +69,25 @@ export default function Home({ students, courses }) {
             </tbody>
             </table>
 
+            <h1>Registration</h1>
+            <table><tbody>
+                {
+                    registrations.map(registration => {
+                        return (
+                            <tr key={registration._id}>
+                                <td>
+                                    {registration.studentID}
+                                </td>
+                                <td>
+                                    {registration.courseID}
+                                </td>
+                            </tr>
+                        )
+                    })
+                }
+            </tbody>
+            </table>
+
 
         </>
     )
@@ -78,5 +100,8 @@ export async function getServerSideProps() {
     const cou = await fetch(`https://web-pro2-backend.vercel.app/api/hub/courses`)
     const courses = await cou.json()
 
-    return { props: { students, courses } }
+    const reg = await fetch(`https://web-pro2-backend.vercel.app/api/hub/registrations`)
+    const registrations = await reg.json()
+
+    return { props: { students, courses, registrations } }
 }

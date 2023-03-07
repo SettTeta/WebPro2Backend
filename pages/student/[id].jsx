@@ -5,17 +5,21 @@ import Link from "next/link"
 export default function Blog({ student }) {
   if (!student) return (
     <div>
-      <p>Blog not found</p>
+      <p>Student not found</p>
       </div>
   );
 
   return (
     <>
       <Head>
-        <title>{student.title}</title>
+        <title>{student.firstName} {student.lastName}</title>
       </Head>
-      <h1>{student.title}</h1>
-      <p>{student.content}</p>
+      <h1>ID: {student._id}</h1>
+      <p>Username: {student.username}</p>
+      <p>Name: {student.firstName} {student.lastName}</p>
+      <p>password: {student.password}</p>
+      <p>email: {student.email}</p>
+
     </>
   )
 }
