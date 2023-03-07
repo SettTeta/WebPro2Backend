@@ -23,7 +23,7 @@ export default function Blog({ student }) {
 // STEP 1: This function will be executed at the server before loading the page.
 export async function getServerSideProps({ params }) {
   console.debug('params', params)
-  const res = await fetch(`https://web-pro2-backend.vercel.app/api/project-2/student/${params.id}`)
+  const res = await fetch(`https://web-pro2-backend.vercel.app/api/hub/students/${params.id}`)
 //   const res = await fetch(`http://localhost:3000/api/project-2/students/${params.id}`)
   const student = await res.json()
   console.debug('blog 1', student)
