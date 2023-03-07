@@ -23,6 +23,7 @@ const courseSchema = new Schema({
     instructor: String,
     date: String,
     time: String,
+    credit: String,
 });
 
 const Course = models?.courses || model('course', courseSchema);
