@@ -2,13 +2,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
-export default function Home({ students }) {
+export default function Home({ students, courses }) {
 
 
     return (
         <>
             <Head>
-                <title>Students</title>
+                <title>Student Hub</title>
             </Head>
             <h1>Students</h1>
             <table><tbody>
@@ -38,13 +38,45 @@ export default function Home({ students }) {
             </tbody>
             </table>
 
+            <h1>Courses</h1>
+            <table><tbody>
+                {
+                    courses.map(course => {
+                        return (
+                            <tr key={course._id}>
+                                <td>
+                                    {course.code}
+                                </td>
+                                <td>
+                                    {course.title}
+                                </td>
+                                <td>
+                                    {course.instructor}
+                                </td>
+                                <td>
+                                    {course.date}
+                                </td>
+                                <td>
+                                    {course.time}
+                                </td>
+                            </tr>
+                        )
+                    })
+                }
+            </tbody>
+            </table>
+
 
         </>
     )
 }
 export async function getServerSideProps() {
     // const res = await fetch(`http://localhost:3000/api/project-2/students`)
-    const res = await fetch(`https://web-pro2-backend.vercel.app/api/hub/students`)
-    const students = await res.json()
-    return { props: { students } }
+    const stu = await fetch(`https://web-pro2-backend.vercel.app/api/hub/students`)
+    const students = await stu.json()
+
+    const cou = await fetch(`https://web-pro2-backend.vercel.app/api/hub/courses`)
+    const courses = await cou.json()
+
+    return { props: { students, courses } }
 }

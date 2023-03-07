@@ -6,10 +6,10 @@ export default async function handler(req, res) {
     console.log("req.method: ", req.method)
 
     if (req.method === 'GET') {
-        const docs = await Student.find();
+        const docs = await Course.find();
         res.status(200).json(docs)
     } else if (req.method === 'POST') {
-        const doc = await Student.create(req.body)
+        const doc = await Course.create(req.body)
         res.status(201).json(doc)
     } else {
         res.setHeader('Allow', ['GET', 'POST'])
@@ -17,12 +17,12 @@ export default async function handler(req, res) {
     }
 }
 
-const studentSchema = new Schema({
-    email: String,
-    username: String,
-    firstName: String,
-    lastName: String,
-    password: String,
+const courseSchema = new Schema({
+    code: String,
+    title: String,
+    instructor: String,
+    date: String,
+    time: String,
 });
 
-const Student = models?.students || model('students', studentSchema);
+const Course = models?.courses || model('course', courseSchema);
