@@ -18,8 +18,8 @@ export default async function handler(req, res) {
 }
 
 const registrationSchema = new Schema({
-    studentID: Schema.Types.ObjectId,
-    courseID: Schema.Types.ObjectId,
+    studentID: String,
+    courseID: String,
 });
 
-const Registration = models?.registration || model('course', registrationSchema);
+const Registration = models?.registrations || model('registrations', registrationSchema);
