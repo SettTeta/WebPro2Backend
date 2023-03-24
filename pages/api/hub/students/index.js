@@ -5,7 +5,10 @@ export default async function handler(req, res) {
     await connect(connectionString);
     console.log("req.method: ", req.method)
 
-    res.setHeader('Access-Control-Allow-Origin', 'https://student-hub-rosy.vercel.app');
+    // Set CORS headers
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
     if (req.method === 'GET') {
         const docs = await Student.find();
