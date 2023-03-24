@@ -33,6 +33,7 @@ const studentSchema = new Schema({
     firstName: String,
     lastName: String,
     password: String,
+    studentId: String,
 });
 
 console.log("Mongoose Models", models)

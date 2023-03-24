@@ -23,6 +23,7 @@ const studentSchema = new Schema({
     firstName: String,
     lastName: String,
     password: String,
+    studentId: String,
 });
 
 const Student = models?.students || model('students', studentSchema);
