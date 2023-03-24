@@ -29,6 +29,9 @@ export default function Home({ students, courses, registrations, grades }) {
                         <td>
                             Student Password
                         </td>
+                        <td>
+                            Student ID
+                        </td>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,6 +54,9 @@ export default function Home({ students, courses, registrations, grades }) {
                                     </td>
                                     <td>
                                         {student.password}
+                                    </td>
+                                    <td>
+                                        {student.studentId}
                                     </td>
                                     <td>
                                         <Link href={`/student/${student._id}`}>Profile</Link>
