@@ -16,6 +16,15 @@ A web application that will provide students with a centralized platform to acce
 2. Course schedules: Provide students with a calendar view of their class schedules, including course names, instructors, meeting times, and locations. This could be integrated with your university's course catalog and registration system to ensure that the information is up-to-date.
 3. Grades and transcripts: Allow students to view their grades for each course, as well as their cumulative GPA. You may also want to provide access to official transcripts, which can be a useful resource when applying for jobs or further education.
 
+## Pages
+1. Login Page - Users can login by Email or USER ID with a password. They can click ``Dont have an account? Sign up`` to create their account.
+2. Sign Up Page - Users can sign up by fill in Email, Faculty, First Name, Last Name, Student ID Number, and Password.
+3. HomePage - Shows today class and day with subject code, title, time, and Instructor name.
+4. Schedule - Shows weekly schedule with time. Also, Instructor details with subjects name and Instructor names.
+5. Courses - Shows a search for course code, titles, instructors, times, and dates. Also, Course code, title, instructor, date, time, credit, register, and unregister. Users can choose courses to add.
+6. Grade and Transcription - Shows Courses code and name which Users can choose their grades (A+, A, A-,B+, B, B-, C+, C, C-, D+, D, F) to calculate their GPA.
+7. User Profile - Shows Name, Student ID, Faculty, Email, GPA, and Credits.
+
 ## How to use:
 Before accessing the application, user needs to login (if the user still not have an account, they can sign up). After that, the home page will be shown up. There are 3 things user can check in the Student Hub are: Schedule, Course, Grade and Transcription. The user can go to Course to add what subject they want to or they can delete. Then they can check their study days in detail in the Schedule box. The user also can check their score in the Grade and Transcription. And finally they should click the button Log out before leaving the application.
 
