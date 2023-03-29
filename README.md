@@ -1,5 +1,5 @@
 ## Project Name
-STUDENT HUB
+**STUDENT HUB**
 
 
 ## Team members
